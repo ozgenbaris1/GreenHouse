@@ -24,9 +24,7 @@ class ChartList extends StatelessWidget {
                     MaterialPageRoute(
                       builder: (_) {
                         return ChartDetailScreen(
-                          data: item.sensorData
-                              .map<double>((item) => item.value)
-                              .toList(),
+                          sensorData: item.sensorData,
                           child: ChartItem(
                             metric: item.sensor.unitSymbol,
                             value: item.sensorData[0].value,

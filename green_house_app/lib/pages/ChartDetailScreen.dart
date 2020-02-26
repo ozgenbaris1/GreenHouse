@@ -2,16 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:green_house_app/helper/Colors.dart';
 
+import '../models/SensorData.dart';
+import '../models/SensorData.dart';
+
 class ChartDetailScreen extends StatelessWidget {
-  final List<double> data;
+  final List<SensorData> sensorData;
   final Widget child;
 
   const ChartDetailScreen({
     Key key,
-    this.data,
+    this.sensorData,
     this.child,
   }) : super(key: key);
-  
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -45,7 +48,7 @@ class ChartDetailScreen extends StatelessWidget {
                     child: DataTable(
                       headingRowHeight: 45,
                       horizontalMargin: 10,
-                      rows: _convertDataToDataRow(data),
+                      rows: _convertDataToDataRow(),
                       columns: [
                         DataColumn(
                           label: Text(
@@ -73,21 +76,20 @@ class ChartDetailScreen extends StatelessWidget {
     );
   }
 
-  List<DataRow> _convertDataToDataRow(List<double> list) {
-    return list
-        .asMap()
+  List<DataRow> _convertDataToDataRow() {
+    return sensorData
         .map(
-          (index, data) => MapEntry(
-            index,
-            DataRow(
-              cells: [
-                DataCell(Text('25.02.2020 19:51')),
-                DataCell(Text(data.toString())),
-              ],
-            ),
+          (item) => DataRow(
+            cells: [
+              DataCell(
+                Text(item.createdDate),
+              ),
+              DataCell(
+                Text(item.value.toString()),
+              ),
+            ],
           ),
         )
-        .values
         .toList();
   }
 }
