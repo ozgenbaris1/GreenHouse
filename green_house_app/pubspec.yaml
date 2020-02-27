@@ -24,6 +24,7 @@ dependencies:
   flutter_svg: 0.17.1 
   provider: ^4.0.2
   flutter_sparkline: ^0.1.0
+  fl_chart: ^0.8.1
   circle_bottom_navigation: ^1.0.4
 
 

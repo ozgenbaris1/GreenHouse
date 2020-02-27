@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:green_house_app/helper/Colors.dart';
-
-import '../models/SensorData.dart';
 import '../models/SensorData.dart';
 
 class ChartDetailScreen extends StatelessWidget {

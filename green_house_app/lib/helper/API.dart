@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:http/http.dart' as http;
 
-const baseUrl = "http://192.168.1.3:8080";
+const baseUrl = "http://192.168.1.27:8080";
 
 class API {
   static getDevices() async {

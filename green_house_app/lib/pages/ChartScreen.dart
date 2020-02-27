@@ -3,10 +3,8 @@ import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:green_house_app/helper/Colors.dart';
-import 'package:green_house_app/pages/ChartDetailScreen.dart';
 import 'package:green_house_app/providers/ChartProvider.dart';
 import 'package:green_house_app/providers/DeviceProvider.dart';
-import 'package:green_house_app/widgets/ChartItem.dart';
 import 'package:green_house_app/widgets/ChartList.dart';
 import 'package:provider/provider.dart';
 
@@ -21,7 +19,6 @@ class _ChartScreen extends State {
   @override
   initState() {
     super.initState();
-    randomList = getListOfData();
     initDataProviders();
   }
 
@@ -49,16 +46,5 @@ class _ChartScreen extends State {
       ),
       // bottomNavigationBar: NavigationBarWidget(),
     );
-  }
-
-  List<double> getListOfData() {
-    List<double> list = new List<double>();
-
-    var rng = new Random();
-    for (var i = 0; i < 50; i++) {
-      list.add(rng.nextDouble() * 10);
-    }
-
-    return list;
   }
 }
