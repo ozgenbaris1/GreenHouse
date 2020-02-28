@@ -1,9 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:green_house_app/helper/Colors.dart';
-import 'package:green_house_app/providers/ChartProvider.dart';
 import 'package:green_house_app/providers/DeviceProvider.dart';
-import 'package:green_house_app/widgets/ChartList.dart';
 import 'package:green_house_app/widgets/DeviceList.dart';
 import 'package:provider/provider.dart';
 

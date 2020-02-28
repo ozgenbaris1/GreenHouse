@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:green_house_app/models/ChartData.dart';
 import 'package:green_house_app/models/Device.dart';
-import 'package:green_house_app/pages/ChartDetailScreen.dart';
 import 'package:green_house_app/providers/DeviceProvider.dart';
-import 'package:green_house_app/widgets/ChartItem.dart';
 import 'package:green_house_app/widgets/DeviceItem.dart';
 import 'package:provider/provider.dart';
 
