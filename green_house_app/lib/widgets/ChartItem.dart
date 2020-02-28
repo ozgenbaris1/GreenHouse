@@ -5,7 +5,7 @@ import 'package:green_house_app/helper/Colors.dart';
 
 class ChartItem extends StatelessWidget {
   final String metricName;
-  final num value;
+  final double value;
   final String metric;
   final List<double> dataList;
 
