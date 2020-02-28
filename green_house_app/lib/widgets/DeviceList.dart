@@ -4,6 +4,8 @@ import 'package:green_house_app/providers/DeviceProvider.dart';
 import 'package:green_house_app/widgets/DeviceItem.dart';
 import 'package:provider/provider.dart';
 
+import '../pages/ChartScreen.dart';
+
 class DeviceList extends StatelessWidget {
   final List<Device> deviceData;
 
@@ -23,7 +25,10 @@ class DeviceList extends StatelessWidget {
                   onPressed: () {
                     Provider.of<DeviceProvider>(context, listen: false)
                         .setCurrentDevice(index);
-                    Navigator.pop(context);
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => ChartScreen()),
+                    );
                   },
                   child: DeviceItem(
                     name: item.name,

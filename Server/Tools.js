@@ -99,5 +99,37 @@ module.exports = function() {
         return response;
     };
 
+    this.getDeviceAndSensors = function(data) {
+
+        var response = {
+            type: 'S',
+            message: null,
+            data: []
+        }
+
+
+
+        var database = new sqlite3(DATABASE_PATH);
+
+
+
+
+        var devices = database.prepare(`SELECT * FROM Devices`).all();
+        var sensors;
+
+        devices.forEach(item => {
+            var dataItem = {};
+            dataItem.device = item;
+            dataItem.sensors = database.prepare(`SELECT * FROM ConnectedSensorsToDevices LEFT JOIN Sensors ON ConnectedSensorsToDevices.SensorID = Sensors.SensorID WHERE ConnectedSensorsToDevices.DeviceID = ${item.DeviceID}`).all();
+            response.data.push(dataItem);
+        });
+
+        database.close();
+
+        return response;
+    };
+
+
+
 
 }

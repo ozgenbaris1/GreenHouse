@@ -31,6 +31,14 @@ class _ChartScreen extends State {
       backgroundColor: MyColors.backgroundColor,
       appBar: AppBar(
         actionsIconTheme: IconThemeData(color: MyColors.headerTextColor),
+        automaticallyImplyLeading: true,
+        leading: IconButton(
+          color: MyColors.headerTextColor,
+          icon: Icon(Icons.devices),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
         backgroundColor: MyColors.appBarColor,
         title: Text(
           DeviceProvider.currentDevice.name,

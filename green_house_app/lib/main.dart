@@ -4,6 +4,7 @@ import 'package:green_house_app/pages/HomeScreen.dart';
 import 'package:green_house_app/providers/ChartProvider.dart';
 import 'package:green_house_app/providers/SensorDataProvider.dart';
 import 'package:provider/provider.dart';
+import 'pages/DevicesScreen.dart';
 import 'providers/DeviceProvider.dart';
 
 void main() => runApp(MyApp());
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: HomeScreen(),
+        home: DevicesScreen(),
       ),
     );
   }

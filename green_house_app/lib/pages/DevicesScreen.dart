@@ -5,6 +5,8 @@ import 'package:green_house_app/providers/DeviceProvider.dart';
 import 'package:green_house_app/widgets/DeviceList.dart';
 import 'package:provider/provider.dart';
 
+import '../helper/Colors.dart';
+
 class DevicesScreen extends StatefulWidget {
   @override
   createState() => _DevicesScreen();
@@ -19,8 +21,9 @@ class _DevicesScreen extends State {
   @override
   build(context) {
     return Scaffold(
+      backgroundColor: MyColors.backgroundColor,
       appBar: AppBar(
-        backgroundColor: MyColors.appBarColor,
+        backgroundColor: MyColors.backgroundColor,
         actionsIconTheme: IconThemeData(color: MyColors.headerTextColor),
         title: Text(
           "Devices",

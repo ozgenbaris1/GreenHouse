@@ -43,6 +43,19 @@ app.get('/getAllSensorDataOfDevice', (req, res) => {
 
 });
 
+app.get('/getDeviceAndSensors', (req, res) => {
+
+    var deviceID = req.query.deviceID;
+    var sensorID = req.query.sensorID;
+
+    if (!(deviceID)) {
+        res.send("Invalid Parameters");
+    } else {
+        res.send(getDeviceAndSensors(deviceID, sensorID))
+    }
+
+});
+
 
 /*
 app.post('/postSensorData', (req, res) => {

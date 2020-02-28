@@ -56,21 +56,5 @@ class DeviceItem extends StatelessWidget {
       ),
     );
   }
-
-  Widget _buildCard(Widget child, {Function() onTap}) {
-    return Container(
-      margin: EdgeInsets.all(2.0),
-      child: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Material(
-          elevation: 4.0,
-          borderRadius: BorderRadius.circular(12.0),
-          // shadowColor: Colors.white,
-          child: InkWell(
-            child: child,
-          ),
-        ),
-      ),
-    );
-  }
+  
 }
